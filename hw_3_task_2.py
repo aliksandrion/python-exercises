@@ -13,7 +13,7 @@ def main():
                     sleep(t)
                     func_result = func()
                     print(f'Запуск номер {i}. Ожидание: {t} секунд. Результат декорируемой функций = {func_result}.')
-                    t = t * 2 ** factor if t * 2 ** factor < border_sleep_time else border_sleep_time
+                    t = t * factor if t * 2 ** factor < border_sleep_time else border_sleep_time
                     if i == call_count:
                         print('Конец работы')
 
@@ -21,11 +21,10 @@ def main():
 
         return wrapper
 
-    @decorator(call_count=3, start_sleep_time=2, factor=2, border_sleep_time=33)
+    @decorator(call_count=5, start_sleep_time=1, factor=2, border_sleep_time=33)
     def function():
         return 'function()'
 
-    function()
 
 if __name__ == '__main__':
     main()
