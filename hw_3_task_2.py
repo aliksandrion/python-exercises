@@ -13,7 +13,7 @@ def main():
                     sleep(t)
                     func_result = func()
                     print(f'Запуск номер {i}. Ожидание: {t} секунд. Результат декорируемой функций = {func_result}.')
-                    t = t * factor if t * 2 ** factor < border_sleep_time else border_sleep_time
+                    t = t * factor if t * factor < border_sleep_time else border_sleep_time
                     if i == call_count:
                         print('Конец работы')
 
