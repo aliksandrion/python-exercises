@@ -9,7 +9,7 @@ class Place(ABC):
 
 
 class Kostroma(Place):
-    city_name = 'Kostroma'
+    name = 'Kostroma'
 
     def get_local_antagonist(self):
         print('Orcs hid in the forest')
